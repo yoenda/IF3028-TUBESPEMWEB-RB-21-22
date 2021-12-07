@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minggu 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>Simple Lapor</h2>
+<div>
+  <form method="POST" id="lapor_isi" action="add_laporan.php">
+  	<tabel for="lampiran">Lampiran</tabel>
+    <input type="file" id="data_file" name="data_file" placeholder="lampiran"><br>
+    
+    <tabel for="aspek">Aspek Lapor</tabel>
+    <select id="lapor_aspek" name="lapor_aspek">
+      <option value="SKS">SKS</option>
+      <option value="UKT">UKT</option>
+    </select>
+    
+    <tabel for="laporan">Laporan/Komentar</tabel>
+    <input type="text" id="lapor_text" name="lapor_text" placeholder="laporan">
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
