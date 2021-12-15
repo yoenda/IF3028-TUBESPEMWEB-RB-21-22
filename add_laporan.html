@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minggu 4</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="setting.js"></script>
 </head>
 <body>
 <h2>Simple Lapor</h2>
@@ -26,5 +28,23 @@
     <input type="submit" value="Submit">
   </form>
 </div>
+<div id="tampil_data"></div>
+    <script>
+        $(document).ready(function(){
+            $('#tampil_data').load("output_laporan.php");
+            $('#btn_tampil').click(function(){
+                var data = $('#form_pembeli').serialize();
+                $.ajax({
+                    type : 'POST',
+                    url : "add_laporan.php",
+                    data : data,
+                    cache : false,
+                    success : function(data){
+                        $('#tampil_data').load(output_laporan.php);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
